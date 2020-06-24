@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/enarsinick/Trivia-Application/issues"
   },
-  "homepage": "https://github.com/enarsinick/Trivia-Application#readme"
+  "homepage": "https://github.com/enarsinick/Trivia-Application#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  }
 }
