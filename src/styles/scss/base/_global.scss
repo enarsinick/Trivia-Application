@@ -1,0 +1,17 @@
+/* ============================================= */
+/* Global Styles */
+/* ============================================= */
+
+body {
+    background-image: url('../assets/BackgroundShapes.png');
+    background-color: $bg-colour;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.page-wrapper {
+    padding: 0 $mobile-padding;
+}
+

@@ -1,0 +1,26 @@
+/* ============================================= */
+/* Homepage styles */
+/* ============================================= */
+
+.intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+
+    .intro-copy-block {
+        background-color: $white;
+        padding: 10px 20px;
+        border-radius: $brdr-curve;
+        text-align: center;
+    }
+
+    .intro-btns-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        button {
+            margin-top: 20px;
+        }
+    }
+}
+

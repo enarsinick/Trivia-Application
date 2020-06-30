@@ -1,0 +1,31 @@
+/* ============================================= */
+/* Typography Styles */
+/* ============================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header-font;
+}
+
+p {
+    font-family: $body-font;
+    color: $body-copy-colour;
+    font-size: 0.875rem;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.5625rem;
+    color: $main-header-colour;
+}
+
+h6 {
+    font-size: 0.75rem;
+    color: $body-copy-colour;
+    font-weight: 500;
+}
