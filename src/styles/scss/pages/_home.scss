@@ -9,14 +9,19 @@
 
     .intro-copy-block {
         background-color: $white;
-        padding: 10px 20px;
+        padding: 30px 20px;
         border-radius: $brdr-curve;
         text-align: center;
+
+        h1 {
+            margin-bottom: 15px;
+        }
     }
 
     .intro-btns-wrapper {
         display: flex;
         flex-direction: column;
+        margin-bottom: 30px;
 
         button {
             margin-top: 20px;
