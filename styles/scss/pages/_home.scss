@@ -1,0 +1,70 @@
+/* ============================================= */
+/* Homepage styles */
+/* ============================================= */
+
+.content-left-wrapper {
+    padding: 25px $mobile-padding 15px;
+
+    .intro-copy-block {
+        background-color: $white;
+        padding: 30px 20px;
+        border-radius: $brdr-curve;
+        text-align: center;
+    }
+}
+
+.content-right-wrapper {
+    padding: 0 $mobile-padding;
+    
+    .intro-btns-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+}
+
+// .intro-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100%;
+//     padding-top: 25px;
+
+//     @include mq($tablet-mq) {
+//         height: 100%;
+//         width: 80%;
+//         margin: 0 auto;
+//         padding: 0;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//     }
+
+//     .intro-copy-block {
+//         background-color: $white;
+//         padding: 30px 20px;
+//         border-radius: $brdr-curve;
+//         text-align: center;
+
+//         @include mq($tablet-mq) {
+//             padding: 50px 45px;
+//         }
+
+//         h1 {
+//             margin-bottom: 15px;
+//         }
+//     }
+
+//     .intro-btns-wrapper {
+//         margin: 15px 0 25px;
+//         display: grid;
+//         grid-template-columns: 1fr;
+//         grid-gap: 15px;
+
+//         @include mq($tablet-mq) {
+//             grid-gap: 25px;
+//             margin: 25px 0 0 0;
+//         }
+//     }
+// }
+

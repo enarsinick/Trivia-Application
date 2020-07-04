@@ -1,0 +1,42 @@
+/* ============================================= */
+/* Button styles */
+/* ============================================= */
+
+.start-btns {
+    background-color: $start-btn-colour;
+    padding: 15px 20px;
+    height: 78px;
+    border-radius: $brdr-curve;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq($tablet-mq) {
+      height: 106px;
+      padding: 28px 35px;
+    }
+
+    &::after {
+      content: url('../../../assets/Group10.svg');
+      // height: 11.1px;
+      // width: 10.22px;
+      // margin: 0 0 0 7px;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      color: $sub-header-colour;
+
+      @include mq($tablet-mq) {
+        font-size: 1.5625rem;
+      }
+    }
+
+    p {
+      display: none;
+
+      @include mq($tablet-mq) {
+        display: block;
+      }
+    }
+}

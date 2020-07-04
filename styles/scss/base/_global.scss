@@ -1,0 +1,37 @@
+/* ============================================= */
+/* Global Styles */
+/* ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $bg-colour;
+    position: relative;
+    height: 100%;
+}
+
+main {
+    padding: 52px 0 25px;
+}
+
+// .page-wrapper {
+//     padding: 0 $mobile-padding;
+
+//     @include mq($mobile-lg-mq) {
+//         height: calc(100% - 48px);
+//     }
+    
+//     @include mq($tablet-mq) {
+//         height: calc(100% - 62.59px);
+//         padding: 0 $tablet-padding;
+//     }
+// }
+
