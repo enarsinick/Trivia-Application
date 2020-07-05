@@ -10,17 +10,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     @include mq($tablet-mq) {
       height: 106px;
       padding: 28px 35px;
     }
 
+    @include mq($desktop-mq) {
+      height: 125px;
+      padding: 28px 35px;
+    }
+
     &::after {
       content: url('../../../assets/Group10.svg');
-      // height: 11.1px;
-      // width: 10.22px;
-      // margin: 0 0 0 7px;
     }
 
     h4 {

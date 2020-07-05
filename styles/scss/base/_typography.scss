@@ -33,6 +33,10 @@ h1 {
     @include mq($tablet-mq) {
         font-size: 2.8125rem;
     }
+
+    @include mq($desktop-mq) {
+        font-size: 3.4375rem;
+    }
 }
 
 h6 {

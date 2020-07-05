@@ -13,6 +13,10 @@ header nav {
 
         img:nth-child(1) {
             width: 60px;
+
+            @include mq($laptop-mq) {
+                width: 72px;
+            }
         }
     }
 }
@@ -25,6 +29,11 @@ footer nav {
     @include mq($tablet-mq) {
         position: absolute;
         bottom: 0;
+        padding: 0 $tablet-padding $tablet-padding
+    }
+
+    @include mq($laptop-mq) {
+        text-align: left;
     }
 
     a {

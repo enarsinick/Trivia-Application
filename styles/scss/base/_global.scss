@@ -14,24 +14,37 @@ html {
 
 body {
     background-color: $bg-colour;
+    background-image: url("../../../assets/BackgroundShapes.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     height: 100%;
 }
 
 main {
     padding: 52px 0 25px;
-}
 
-// .page-wrapper {
-//     padding: 0 $mobile-padding;
+    @include mq($tablet-mq) {
+        height: 100%;
+        max-width: 558px;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-//     @include mq($mobile-lg-mq) {
-//         height: calc(100% - 48px);
-//     }
+    @include mq($laptop-mq) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1208px;
+        padding: 0 $tablet-padding;
+    }
     
-//     @include mq($tablet-mq) {
-//         height: calc(100% - 62.59px);
-//         padding: 0 $tablet-padding;
-//     }
-// }
+    @include mq($desktop-mq) {
+        padding: 0;
+    }
+}
 
