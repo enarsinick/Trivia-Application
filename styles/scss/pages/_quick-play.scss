@@ -2,116 +2,198 @@
 /* Quick Play styles */
 /* ============================================= */
 
-.game-copy-wrapper {
-    padding: 40px $mobile-padding;
-    text-align: center;
-
-    @include mq($tablet-mq) {
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 70px $tablet-padding;
-    }
-    
-    h1 {
-        padding-bottom: 15px;
-
-        @include mq($tablet-mq) {
-            font-size: 35px;
-        }
-    }
+.exit-btn {
+    position: absolute;
+    right: 22px;
+    top: 22px;
 }
 
-.main-game-area {
-    background-color: white;
-    height: 100%;
-    padding: 50px $mobile-padding 30px;
-    text-align: center;
-    border-radius: 30px 30px 0 0;
+.game-main {
+    padding-top: 70px;
 
-    @include mq($tablet-mq) {
-        height: initial !important;
-        border-radius: 50px 50px 0 0 !important;
-        padding: 60px 50px 30px !important;
+    @include mq($laptop-mq) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0;
     }
 
-    h5 {
-        color: $eyebrow-text-colour;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 1px;
-        margin: 0;
-    }
-
-    h2 {
-        margin: 0;
-        padding: 10px 0 30px 0;
-        font-size: 1.25rem;
+    .intro-section {
+        padding: 30px $mobile-padding 50px;
+        text-align: center;
 
         @include mq($tablet-mq) {
-            padding: 10px 0 50px 0;
-            font-size: 1.75rem;
-            max-width: 450px;
+            max-width: 500px;
             margin: 0 auto;
-        }
-    }
-
-    .answer-section {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-        margin-bottom: 40px;
-
-        @include mq($tablet-mq) {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
+            padding: 70px 0 0;
         }
 
-        button {
-            background-color: $bg-colour;
-            border: none;
-            font-family: $header-font;
-            font-size: 16px;
-            color: $body-copy-colour;
+        @include mq($laptop-mq) {
+            width: 45%;
             text-align: left;
-            padding: 22px 26px;
-            border-radius: $brdr-curve;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 0 $tablet-padding;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 5px;
 
             @include mq($tablet-mq) {
-                height: 68px;
+                margin-bottom: 15px;
             }
         }
     }
 
-    .submit-btn {
+    .main-game-area {
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        padding: 22px 20px;
-        border-radius: $brdr-curve;
-        display: inline-block;
-        background-color: $btn-primary-colour;
-        color: white;
-        border: none;
-        font-family: $header-font;
-        font-size: 16px;
-    }
-
-    .progress-bar-wrapper {
-        margin: 40px 0;
+        background-color: white;
+        padding: 50px $mobile-padding 30px;
+        text-align: center;
+        border-radius: 30px 30px 0 0;
 
         @include mq($tablet-mq) {
-            margin: 100px 0 40px;
+            border-radius: 50px 50px 0 0;
+            padding: 60px $tablet-padding 30px;
         }
 
-        p {
-            margin: 0;
+        @include mq($laptop-mq) {
+            position: static;
+            display: flex;
+            align-items: center;
+            width: 55%;
+            border-radius: 50px 0 0 50px;
         }
 
-        .progress-bar {
-            height: 6px;
-            width: 100%;
-            background-color: rgba(#F2744E, 0.08);
-            border-radius:  5px;
-            margin-top: 12px;
+        .game-content-wrapper {
+
+            @include mq($tablet-mq) {
+                max-width: 640px;
+                margin: 0 auto;
+            }
+
+            h5 {
+                color: $eyebrow-text-colour;
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin: 0;
+            }
+    
+            h2 {
+                margin: 0;
+                padding: 10px 0 30px 0;
+                font-size: 1.25rem;
+    
+                @include mq($tablet-mq) {
+                    font-size: 1.75rem;
+                    max-width: 500px;
+                    margin: 0 auto;
+                }
+            }
+    
+            .answer-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
+                margin-bottom: 40px;
+    
+                @include mq($tablet-mq) {
+                    margin: 0 auto 40px;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                }
+    
+                button {
+                    background-color: $bg-colour;
+                    border: none;
+                    font-family: $header-font;
+                    font-size: 16px;
+                    color: $body-copy-colour;
+                    text-align: left;
+                    padding: 22px 26px;
+                    border-radius: $brdr-curve;
+
+                    @include mq($tablet-mq) {
+                        height: 68px;
+                    }
+                }
+            }
+    
+            .submit-btn {
+                width: 100%;
+                padding: 22px 20px;
+                border-radius: $brdr-curve;
+                display: inline-block;
+                background-color: $btn-primary-colour;
+                color: white;
+                border: none;
+                font-family: $header-font;
+                font-size: 16px;
+            }
+    
+            .progress-bar-wrapper {
+                margin: 40px 0;
+
+                @include mq($tablet-mq) {
+                    margin: 100px 0 40px;
+                }
+    
+                p {
+                    margin: 0;
+                }
+    
+                .progress-bar {
+                    height: 6px;
+                    width: 100%;
+                    background-color: rgba(#F2744E, 0.08);
+                    border-radius:  5px;
+                    margin-top: 12px;
+                }
+            }
+    
+            .project-by-wrapper {
+
+                @include mq($laptop-mq) {
+                    position: absolute;
+                    left: $tablet-padding;
+                    bottom: $tablet-padding;
+                }
+    
+                a {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
+
+
+
+
+// .game-copy-wrapper {
+//     padding: 40px $mobile-padding;
+//     text-align: center;
+
+//     @include mq($tablet-mq) {
+//         max-width: 500px;
+//         margin: 0 auto;
+//         padding: 70px $tablet-padding;
+//     }
+    
+//     h1 {
+//         padding-bottom: 15px;
+
+//         @include mq($tablet-mq) {
+//             font-size: 35px;
+//         }
+//     }
+// }
+

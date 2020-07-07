@@ -22,7 +22,7 @@ body {
     height: 100%;
 }
 
-main {
+.home-main {
     padding: 52px 0 25px;
 
     @include mq($tablet-mq) {
@@ -47,4 +47,6 @@ main {
         padding: 0;
     }
 }
+
+
 
