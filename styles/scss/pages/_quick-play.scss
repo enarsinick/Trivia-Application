@@ -64,6 +64,7 @@
 
         @include mq($tablet-mq) {
             height: initial;
+            min-height: 680px;
             position: absolute;
             bottom: 0;
             border-radius: 50px 50px 0 0;
@@ -223,10 +224,16 @@
     
             .project-by-wrapper {
 
-                @include mq($laptop-mq) {
+                @include mq($tablet-mq) {
                     position: absolute;
-                    left: $tablet-padding;
                     bottom: $tablet-padding;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                @include mq($laptop-mq) {          
+                    left: $tablet-padding;
+                    transform: translateX(0);
                 }
     
                 a {

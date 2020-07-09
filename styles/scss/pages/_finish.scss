@@ -2,6 +2,81 @@
 /* Finish page Styles */
 /* ============================================= */
 
+.game-content-wrapper {
+    .score-percent {
+        font-size: 4.375rem;
+        color: $sub-header-colour;
+        margin-bottom: 20px;
+
+        @include mq($tablet-mq) {
+            font-size: 8.75rem;
+        }
+
+        @include mq($laptop-mq) {
+            margin-bottom: 0;
+            font-size: 9.375rem;
+        }
+
+        @include mq($desktop-mq) {
+            font-size: 12.5rem;
+            margin-top: -25px;
+            margin-left: -5px;
+        }
+    }
+
+    p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .btn-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        margin: 35px 0;
+
+        @include mq($tablet-mq) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+        }
+
+        @include mq($laptop-mq) {
+            max-width: 352px;
+            grid-gap: 15px;
+        }
+
+        @include mq($desktop-mq) {
+            margin: 50px 0 0;
+        }
+
+        .restart-btn {
+            width: 100%;
+            padding: 22px 20px;
+            border-radius: $brdr-curve;
+            display: inline-block;
+            background-color: $btn-primary-colour;
+            color: white;
+            border: none;
+            font-family: $header-font;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .home-btn {
+            width: 100%;
+            padding: 22px 20px;
+            border-radius: $brdr-curve;
+            display: inline-block;
+            color: rgba(0,0,0,0.5);;
+            border: none;
+            font-family: $header-font;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: $btn-secondary-colour;
+        }
+    }
+}
+
 // .main-game-area {
 //     background-color: white;
 //     height: 100%;
