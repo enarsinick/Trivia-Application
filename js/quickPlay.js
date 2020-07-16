@@ -1,8 +1,8 @@
+// We need to store the JSON data in an array of objects
+export let gameData = [];
+
 // We need to process the JSON response data and start the quick play game
 export function quickPlayGameStart(quiz) {
-
-    // We need to store the JSON data in an array of objects
-    let gameData = [];
 
     // Loops through the JSON and create an object of game data ready to use
     for(let i = 0; i < quiz.results.length; i++) {
@@ -19,6 +19,6 @@ export function quickPlayGameStart(quiz) {
     // Adds first question and answers to the DOM
     $('#question-title').html(gameData[0].question);
     for(let i = 0; i < gameData[0].answers.length; i++) {
-        $('.answer-section').append(`<button>${gameData[0].answers[i]}</button>`)
+        $('.answer-section').append(`<button id="answer-btn">${gameData[0].answers[i]}</button>`)
     }
 }
