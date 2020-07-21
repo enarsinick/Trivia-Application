@@ -206,6 +206,7 @@
     
                 p {
                     margin: 0;
+                    max-width: 100%;
                 }
     
                 .progress-bar {
@@ -218,6 +219,18 @@
                     @include mq($desktop-mq) {
                         height: 90%;
                         width: 6px;
+                    }
+
+                    .progress-bar-inner {
+                        width: 2%;
+                        height: 100%;
+                        background-color: $sub-header-colour;
+                        border-radius: 5px;
+
+                        @include mq($desktop-mq) {
+                            height: 2%;
+                            width: 100%;
+                        }
                     }
                 }
             }

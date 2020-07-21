@@ -1,13 +1,14 @@
 //--------------------------------//
 // IMPORTS
 //--------------------------------//
-import { gameData } from './quickPlay.js';
+import { gameData, gameLength } from './quickPlay.js';
 import { loadHTML } from './loadHTMLSnippet.js';
 import { ajaxRequest } from './ajax_request.js';
 
 // Global Variables
-let gameScore = 0;
+export let gameScore = 0;
 let gamePosition = 0;
+
 
 // We want the code to run once the page is ready
 $(document).ready(function() {
@@ -40,16 +41,21 @@ $(document).ready(function() {
         if (hasSelectedAnswer) {
             gamePosition ++;
 
-            if (gamePosition > 24) {
+            if (gamePosition >= gameLength) {
                 // The game has finished, we need to load in the score screen
                 loadHTML('#game-content-wrapper', 'finish.html');
             } else {
-                console.log('Next question');
-
                 $('.answer-section button').remove();
-
                 $('#current-question-header').html(`Question ${gamePosition + 1}`);
+                $('.progress-bar-wrapper p').html(`${gamePosition + 1}/${gameLength}`);
 
+                // Updates progress bar depending on screen size
+                if($(window).width() >= 1280) {
+                    $('.progress-bar-inner').height((gamePosition / gameLength) * 100 + '%');
+                } else {
+                    $('.progress-bar-inner').width((gamePosition / gameLength) * 100 + '%');
+                }
+                
                 // Adds question and answers to the DOM
                 $('#question-title').html(gameData[gamePosition].question);
                 for(let i = 0; i < gameData[gamePosition].answers.length; i++) {
@@ -59,10 +65,6 @@ $(document).ready(function() {
         } else {
             $('.answer-section').after('<p class="selected-answer-error">Please select an answer</p>');
         }
-
-        
-
-        
     });
     
     // We need to add a class to an answer button when selected

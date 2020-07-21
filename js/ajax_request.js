@@ -3,7 +3,7 @@ import { quickPlayGameStart } from './quickPlay.js';
 export function ajaxRequest() {
     $.ajax({
         method: 'GET',
-        url: 'https://opentdb.com/api.php?amount=25&category=9&difficulty=easy&type=multiple&encode=base64',
+        url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple&encode=base64',
         dataType: 'json',
         timeout: 2000,
         // If it was a success, do this...
