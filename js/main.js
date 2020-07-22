@@ -1,16 +1,19 @@
-//--------------------------------//
+//----------------------------------------------------------------//
 // IMPORTS
-//--------------------------------//
-import { gameData, gameLength } from './quickPlay.js';
-import { loadHTML } from './loadHTMLSnippet.js';
-import { ajaxRequest } from './ajax_request.js';
+//----------------------------------------------------------------//
+import { gameData, gameLength, loadHTML, ajaxRequest, insertGameContent } from './helper_functions.js';
 
-// Global Variables
+
+//----------------------------------------------------------------//
+// VARIABLES
+//----------------------------------------------------------------//
 export let gameScore = 0;
-let gamePosition = 0;
+export let gamePosition = 0;
 
 
-// We want the code to run once the page is ready
+//----------------------------------------------------------------//
+// WE WANT THE CODE TO RUN ONCE THE PAGE IS READY
+//----------------------------------------------------------------//
 $(document).ready(function() {
 
     // Once the user clicks the quick play button, it starts the game
@@ -41,26 +44,13 @@ $(document).ready(function() {
         if (hasSelectedAnswer) {
             gamePosition ++;
 
+            // Check if the user has reach the end of the game
             if (gamePosition >= gameLength) {
                 // The game has finished, we need to load in the score screen
                 loadHTML('#game-content-wrapper', 'finish.html');
             } else {
-                $('.answer-section button').remove();
-                $('#current-question-header').html(`Question ${gamePosition + 1}`);
-                $('.progress-bar-wrapper p').html(`${gamePosition + 1}/${gameLength}`);
-
-                // Updates progress bar depending on screen size
-                if($(window).width() >= 1280) {
-                    $('.progress-bar-inner').height((gamePosition / gameLength) * 100 + '%');
-                } else {
-                    $('.progress-bar-inner').width((gamePosition / gameLength) * 100 + '%');
-                }
-                
-                // Adds question and answers to the DOM
-                $('#question-title').html(gameData[gamePosition].question);
-                for(let i = 0; i < gameData[gamePosition].answers.length; i++) {
-                    $('.answer-section').append(`<button id="answer-btn">${gameData[gamePosition].answers[i]}</button>`)
-                };
+                // The game continues, load next question and answers
+                insertGameContent(gamePosition, gameLength, gameData);
             }
         } else {
             $('.answer-section').after('<p class="selected-answer-error">Please select an answer</p>');

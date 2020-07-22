@@ -20,6 +20,7 @@ export function quickPlayGameStart(quiz) {
     gameLength = gameData.length;
 
     // Adds first question and answers to the DOM
+    $('.progress-bar-wrapper p').html(`1/${gameLength}`);
     $('#question-title').html(gameData[0].question);
     for(let i = 0; i < gameData[0].answers.length; i++) {
         $('.answer-section').append(`<button id="answer-btn">${gameData[0].answers[i]}</button>`)
