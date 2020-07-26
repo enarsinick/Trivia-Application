@@ -17,7 +17,7 @@ export let gameLength = 0;
 export function ajaxRequest() {
     $.ajax({
         method: 'GET',
-        url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple&encode=base64',
+        url: 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple&encode=base64',
         dataType: 'json',
         timeout: 2000,
         // If it was a success, do this...
@@ -36,6 +36,17 @@ export function ajaxRequest() {
 //----------------------------------------------------------------//
 // WE NEED TO PROCESS THE JSON RESPONSE DATA AND START THE GAME
 //----------------------------------------------------------------//
+
+// Shuffling the array of questions
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+
 export function quickPlayGameStart(quiz) {
 
     // Loops through the JSON and create an object of game data ready to use
@@ -47,6 +58,7 @@ export function quickPlayGameStart(quiz) {
             answers.push(atob(quiz.results[i].incorrect_answers[j]));
         }
         answers.push(correct);
+        shuffle(answers);
         gameData.push({ question : question, correct : correct, answers : answers})
     };
 

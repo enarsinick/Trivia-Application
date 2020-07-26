@@ -37,6 +37,7 @@ $(document).ready(function() {
                 // If the answer is correct, add 1 to the player sore
                 if($(this).html() === gameData[gamePosition].correct) {
                     gameScore ++;
+                    console.log('Correct answer');
                 }
             }
         });
