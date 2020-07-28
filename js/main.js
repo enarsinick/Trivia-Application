@@ -25,6 +25,8 @@ $(document).ready(function() {
         ajaxRequest();
     });
 
+    
+
     // Listen out for a click on submit button when game is running
     $('body').on('click', '#submit-btn', function() {
 
@@ -68,5 +70,25 @@ $(document).ready(function() {
 
         // Adds the class to the selected button
         $(this).addClass('selected-answer');
+    });
+
+    // Go back to the homepage
+    $('body').on('click', '#exit-btn', function() {
+        location.reload();
+    });
+
+    $('body').on('click', '#restart-btn', function() {
+
+        // We need to make sure the game position tracker and game score is reset
+        if(gamePosition >= gameLength) {
+            gamePosition = 0;
+            gameScore = 0;
+        }
+
+        // Loads the HTML snippet for a quick play game 
+        loadHTML('#body', 'quick-play.html');
+
+        // AJAX request to get the quiz data
+        ajaxRequest();
     });
 });

@@ -49,6 +49,10 @@ function shuffle(a) {
 
 export function quickPlayGameStart(quiz) {
 
+    if(gameData.length >= quiz.results.length) {
+        gameData = [];
+    }
+
     // Loops through the JSON and create an object of game data ready to use
     for(let i = 0; i < quiz.results.length; i++) {
         let answers = [];
