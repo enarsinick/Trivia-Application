@@ -11,6 +11,10 @@
 
 .game-main {
     padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 
     @include mq($laptop-mq) {
         display: flex;
@@ -96,6 +100,7 @@
 
             @include mq($desktop-mq) {
                 max-width: 558px;
+                min-width: 558px;
             }
 
             h5 {
@@ -120,6 +125,8 @@
 
                 @include mq($laptop-mq) {
                     font-size: 2.1875rem;
+                    margin: 0;
+                    max-width: initial;
                 }
 
                 @include mq($desktop-mq) {

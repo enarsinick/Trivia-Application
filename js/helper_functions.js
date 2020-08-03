@@ -17,7 +17,7 @@ export let gameLength = 0;
 export function ajaxRequest() {
     $.ajax({
         method: 'GET',
-        url: 'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple&encode=base64',
+        url: 'https://opentdb.com/api.php?amount=20&category=9&difficulty=easy&type=multiple&encode=base64',
         dataType: 'json',
         timeout: 2000,
         // If it was a success, do this...
@@ -74,6 +74,7 @@ export function quickPlayGameStart(quiz) {
     for(let i = 0; i < gameData[0].answers.length; i++) {
         $('.answer-section').append(`<button id="answer-btn">${gameData[0].answers[i]}</button>`)
     }
+    $('.answer-section').after('<button id="submit-btn" class="submit-btn">Submit</button>');
 }
 
 //----------------------------------------------------------------//

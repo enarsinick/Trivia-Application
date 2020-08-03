@@ -27,6 +27,11 @@
     p {
         max-width: 500px;
         margin: 0 auto;
+
+        @include mq($laptop-mq) {
+            margin: 0;
+            max-width: initial;
+        }
     }
 
     .btn-section {
