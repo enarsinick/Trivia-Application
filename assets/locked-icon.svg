@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52">
-  <g id="locked-icon" transform="translate(-1477 -515)">
-    <circle id="Ellipse_3" data-name="Ellipse 3" cx="26" cy="26" r="26" transform="translate(1477 515)" fill="#f8dab7"/>
-    <g id="user" transform="translate(1495.133 531.167)">
-      <path id="Path_26" data-name="Path 26" d="M13.521,19.784H2.213A2.216,2.216,0,0,1,0,17.571V9.213A2.216,2.216,0,0,1,2.213,7H13.521a2.216,2.216,0,0,1,2.213,2.213v8.359A2.216,2.216,0,0,1,13.521,19.784ZM2.213,8.475a.739.739,0,0,0-.738.738v8.359a.739.739,0,0,0,.738.738H13.521a.739.739,0,0,0,.738-.738V9.213a.739.739,0,0,0-.738-.738Z" transform="translate(0 -0.116)" fill="#6c2500" stroke="#6c2500" stroke-width="0.5"/>
-      <path id="Path_27" data-name="Path 27" d="M12.1,8.359a.738.738,0,0,1-.738-.738v-2.7a3.442,3.442,0,0,0-6.884,0v2.7A.738.738,0,0,1,3,7.621v-2.7a4.917,4.917,0,0,1,9.834,0v2.7A.738.738,0,0,1,12.1,8.359Z" transform="translate(-0.05)" fill="#6c2500" stroke="#6c2500" stroke-width="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="locked-icon" transform="translate(-1175 -509)">
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="20" cy="20" r="20" transform="translate(1175 509)" fill="#f8dab7"/>
+    <g id="user" transform="translate(1188.948 521.436)">
+      <path id="Path_26" data-name="Path 26" d="M10.4,16.834H1.7a1.7,1.7,0,0,1-1.7-1.7V8.7A1.7,1.7,0,0,1,1.7,7h8.7a1.7,1.7,0,0,1,1.7,1.7v6.43A1.7,1.7,0,0,1,10.4,16.834Zm-8.7-8.7a.569.569,0,0,0-.567.567v6.43A.569.569,0,0,0,1.7,15.7h8.7a.569.569,0,0,0,.567-.567V8.7a.569.569,0,0,0-.567-.567Z" transform="translate(0 -1.705)" fill="#6c2500" stroke="#6c2500" stroke-width="0.5"/>
+      <path id="Path_27" data-name="Path 27" d="M10,6.43a.568.568,0,0,1-.567-.567V3.782a2.648,2.648,0,1,0-5.3,0v2.08A.567.567,0,0,1,3,5.862V3.782a3.782,3.782,0,1,1,7.564,0v2.08A.568.568,0,0,1,10,6.43Z" transform="translate(-0.731)" fill="#6c2500" stroke="#6c2500" stroke-width="0.5"/>
     </g>
   </g>
 </svg>

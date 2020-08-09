@@ -23,7 +23,7 @@
     }
 
     &::after {
-      content: url('../../../assets/Group10.svg');
+      content: url('../../assets/Group10.svg');
     }
 
     h4 {
@@ -42,6 +42,15 @@
         display: block;
       }
     }
+}
+
+.start-btns:nth-child(2),
+.start-btns:nth-child(3) {
+  cursor: initial;
+  
+  &::after {
+    content: url('../../assets/locked-icon.svg');
+  }
 }
 
 .selected-answer {
