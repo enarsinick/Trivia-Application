@@ -18,13 +18,15 @@ $(document).ready(function() {
 
     // Once the user clicks the quick play button, it starts the game
     $('#quick-play-btn').on('click', function() {
-        // Loads the HTML snippet for a quick play game 
         loadHTML('#body', 'quick-play.html');
-
-        // AJAX request to get the quiz data
         ajaxRequest();
     });
 
+    // If an answer has been selected, enable the submit button
+    $('body').on('click', '#answer-btn', () => {
+        $('#submit-btn').removeClass('disabled');
+        $('#submit-btn').prop('disabled', false);
+    })
     
 
     // Listen out for a click on submit button when game is running
@@ -54,9 +56,9 @@ $(document).ready(function() {
             } else {
                 // The game continues, load next question and answers
                 insertGameContent(gamePosition, gameLength, gameData);
+                $('#submit-btn').addClass('disabled');
+                $('#submit-btn').prop('disabled', false);
             }
-        } else {
-            $('.answer-section').after('<p class="selected-answer-error">Please select an answer</p>');
         }
     });
     

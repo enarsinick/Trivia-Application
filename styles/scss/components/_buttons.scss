@@ -3,6 +3,7 @@
 /* ============================================= */
 
 .start-btns {
+    outline: none;
     background-color: $start-btn-colour;
     padding: 15px 20px;
     height: 78px;
@@ -56,4 +57,8 @@
 .selected-answer {
   background-color: $sub-header-colour !important;
   color: white !important;
+}
+
+.disabled {
+  opacity: 0.5;
 }

@@ -74,7 +74,8 @@ export function quickPlayGameStart(quiz) {
     for(let i = 0; i < gameData[0].answers.length; i++) {
         $('.answer-section').append(`<button id="answer-btn">${gameData[0].answers[i]}</button>`)
     }
-    $('.answer-section').after('<button id="submit-btn" class="submit-btn">Submit</button>');
+    $('.answer-section').after('<button id="submit-btn" class="submit-btn disabled">Submit</button>');
+    $('#submit-btn').prop('disabled', true);
 }
 
 //----------------------------------------------------------------//

@@ -152,6 +152,7 @@
                 }
     
                 button {
+                    outline: none;
                     background-color: $bg-colour;
                     border: none;
                     font-family: $header-font;
@@ -168,6 +169,10 @@
 
                     
                 }
+
+                .selected-answer-error {
+                    color: red;
+                }
             }
     
             .submit-btn {
@@ -181,6 +186,7 @@
                 font-family: $header-font;
                 font-size: 16px;
                 cursor: pointer;
+                outline: none;
 
                 @include mq($laptop-mq) {
                     width: 170px;
